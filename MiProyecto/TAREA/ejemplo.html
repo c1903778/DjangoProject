@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h1 style="color:red ;">Listado de algunos lenguajes de programacion</h1>
+        <h1>Hay un condicional en la lista que si encuentra Python lo coloca con otro color</h1>
+        </br>
+        {% for n in clist %}
+            {% if n == 'Python' %}
+                <div><h2 style="color:Blue;">{{forloop.counter}}. {{n}}</h2></div>
+            {% else %}
+                <div><h2 style="color:brown;">{{forloop.counter}}. {{n}}</h2></div>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>
